@@ -1,6 +1,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strict": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
