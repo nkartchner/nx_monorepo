@@ -1,46 +1,46 @@
 {
-  "npmScope": "forfun",
-  "affected": {
-    "defaultBase": "master"
-  },
-  "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
+    "npmScope": "forfun",
+    "affected": {
+        "defaultBase": "master"
     },
-    ".eslintrc.json": "*"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "YWYwM2M0NjUtNDg4OC00OTZjLTllYWEtMjA4YTRlYzAyZTk1fHJlYWQtd3JpdGU="
-      }
+    "implicitDependencies": {
+        "package.json": {
+            "dependencies": "*",
+            "devDependencies": "*"
+        },
+        ".eslintrc.json": "*"
+    },
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "@nrwl/nx-cloud",
+            "options": {
+                "cacheableOperations": ["build", "lint", "test", "e2e"],
+                "accessToken": "YWYwM2M0NjUtNDg4OC00OTZjLTllYWEtMjA4YTRlYzAyZTk1fHJlYWQtd3JpdGU="
+            }
+        }
+    },
+    "targetDependencies": {
+        "build": [
+            {
+                "target": "build",
+                "projects": "dependencies"
+            }
+        ]
+    },
+    "projects": {
+        "angularapp": {
+            "tags": []
+        },
+        "angularapp-e2e": {
+            "tags": [],
+            "implicitDependencies": ["angularapp"]
+        },
+        "reactapp": {
+            "tags": []
+        },
+        "reactapp-e2e": {
+            "tags": [],
+            "implicitDependencies": ["reactapp"]
+        }
     }
-  },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
-  },
-  "projects": {
-    "angularapp": {
-      "tags": []
-    },
-    "angularapp-e2e": {
-      "tags": [],
-      "implicitDependencies": ["angularapp"]
-    },
-    "reactapp": {
-      "tags": []
-    },
-    "reactapp-e2e": {
-      "tags": [],
-      "implicitDependencies": ["reactapp"]
-    }
-  }
 }
